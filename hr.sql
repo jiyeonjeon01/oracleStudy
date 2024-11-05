@@ -41,7 +41,34 @@ select 100 + null from dual;
 select * from employees where commission_pct is not null;
 select * from employees where commission_pct is null;
 select employee_id, first_name, commission_pct from employees order by employee_id desc;
+-- order by asc, desc 사번을 기준으로 오름차순으로 정렬
+select employee_id, first_name from employees order by employee_id desc;
+-- group by 
+select department_id, sum(salary) from employees 
+group by department_id having  department_id=30;
 
+select * from employees;
+select * from employees where department_id>=90;
+
+select department_id, salary from employees where department_id>=80;
+select department_id, max(salary) from employees where department_id>=70 group by department_id;
+select department_id, max(salary), min(salary), sum(salary), round(avg(salary),1), 
+count(salary) from employees where department_id>=70 group by department_id having sum(salary)>=30000;
+select max(salary), round(avg(salary),1), sum(salary) from employees;
+-- 문자열 일부만 추출 substr(대상, 시작위치, 추출갯수)
+select substr('DATABASE', 1, 3) from dual;
+-- 20번 부서에서 사원들의 입사년도 가져오기
+select employee_id, first_name, substr(hire_date, 1, 2) || '년도' as "입사년도" from employees where department_id=20;
+-- trim
+select trim(leading from ' abcd ') lt, length(trim(leading from '       abcd ')) lt_len,
+       trim(trailing from ' abcd ') rt, length(trim(trailing from '     abcd ')) rt_len,
+       trim(both from ' abcd ') both1, length(trim(both from '   abcd ')) both1,
+       trim('    abcd    ') both2, length(trim(' abcd ')) bothlen2 from dual;
+-- 부서 30번 소속된 직원들 근무 달수를 구하기
+select first_name, hire_date as 입사일, sysdate as 현재날짜,
+round (months_between(sysdate, hire_date)) as "근무달수" from employees where department_id=30;
+-- next_day() 함수의 기능
+select sysdate, to_char(sysdate, 'YYYY/MM/DD HH24:Mi:SS'), next_day(sysdate, '수요일') from dual;
 
 
 
