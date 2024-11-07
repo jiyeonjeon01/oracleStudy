@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A7CF4B9C-02D4-251C-6B2E-D37B73692626" containerWithKeyObject="AEED3F2F-397B-5A3E-C355-3B5EDA1DBAC3" localFKIndex="FB2B7B49-B9ED-EDBE-08FC-E75A75229DB4" name="LENDRETURN_VCODE_FK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LENFRETURN_VCODE_FK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:12 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<referredTableLongName>HR.VIDEO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>53D19623-EBAB-62D7-4A91-9B3C1E2F12F5</referredTableID>
+<keyObject>6DE09423-ADF7-E271-B6E2-821D0747BDB4</keyObject>
+<referredKeyID>6DE09423-ADF7-E271-B6E2-821D0747BDB4</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>VCODE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

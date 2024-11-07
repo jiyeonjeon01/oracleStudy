@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D85909BD-FEAF-9FEE-311B-8F24C282BE76" schemaObject="9CC1AD26-691C-3002-A676-94B3EF1BA125" name="VCUSTOMER">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VCUSTOMER</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:07 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CCODE" id="0D2D50B3-AA22-565B-295B-64797C7BF079">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VCUSTOMER</sourceObjSchema>
+<sourceObjName>CCODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:07 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="243ED1E0-B6AC-0C3B-C339-2B441EBD1407">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VCUSTOMER</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:07 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AGE" id="E6ACECA5-57DF-4A49-D52D-D368F7FFF0E5">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VCUSTOMER</sourceObjSchema>
+<sourceObjName>AGE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:07 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDR" id="3E394DAC-775F-5E8C-4821-E8FD67BE6565">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VCUSTOMER</sourceObjSchema>
+<sourceObjName>ADDR</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:07 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE" id="DE211F27-EE86-63CD-45A8-4167336A2481">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VCUSTOMER</sourceObjSchema>
+<sourceObjName>PHONE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:07 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4AC2390-D2DB-3C83-179E-E6FC79125031" name="VCUSTOMER_CCODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VCUSTOMER_CCODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:11 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D2D50B3-AA22-565B-295B-64797C7BF079"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A4743F6-2DC9-09B3-4E49-2D019ADAAB9F" schemaObject="9CC1AD26-691C-3002-A676-94B3EF1BA125" name="VCUSTOMER_CCODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VCUSTOMER_CCODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:06:10 UTC</createdTime>
+<ownerDesignName>test1105_design</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D2D50B3-AA22-565B-295B-64797C7BF079"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
