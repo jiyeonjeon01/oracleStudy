@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B5AC958A-5C99-2548-BC4E-F3BF33B5125E" schemaObject="D83AA2B6-01D5-742A-2D80-6BB66B919B1C" name="VIDEO">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VIDEO</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VCODE" id="3A096E03-E8FE-FC0B-78E6-07CC423D14C5">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>VCODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITLE" id="0132F8C8-1A16-ACDB-D95F-EC03A5C5EAFE">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENRE" id="FF0F7A96-6C20-6D89-4A3F-89BE42163340">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>GENRE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAY" id="799C4419-5C3B-38D4-5252-219B0E2682BC">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>PAY</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATE" id="C42FCB33-A555-986B-40ED-5E834D654AA2">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>STATE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMPANY" id="254F853B-FEB6-B355-DBF2-8DA1324DEA0C">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>COMPANY</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAKEDATE" id="DCD0D0E4-6FF0-3012-4183-398859457C41">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>MAKEDATE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VIEWAGE" id="2F92C9D0-F96B-FB80-26CD-32BB88CE9956">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>VIDEO</sourceObjSchema>
+<sourceObjName>VIEWAGE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4EAD2D79-2E88-5882-F489-8ACBAC0A8619" name="VIDEO_VCODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VIDEO_VCODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A096E03-E8FE-FC0B-78E6-07CC423D14C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45AF1E9D-060E-C664-A39F-E3E839E28736" schemaObject="D83AA2B6-01D5-742A-2D80-6BB66B919B1C" name="VIDEO_VCODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>VIDEO_VCODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A096E03-E8FE-FC0B-78E6-07CC423D14C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

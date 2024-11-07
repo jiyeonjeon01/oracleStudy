@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="VIDEO" directorySegmentName="seg_0" id="B5AC958A-5C99-2548-BC4E-F3BF33B5125E">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<schemaObject>D83AA2B6-01D5-742A-2D80-6BB66B919B1C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>F90444CB-2A2C-C8F0-AFF6-BF835407A91C</segment>
+<tableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TITLE" id="0132F8C8-1A16-ACDB-D95F-EC03A5C5EAFE">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMPANY" id="254F853B-FEB6-B355-DBF2-8DA1324DEA0C">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VIEWAGE" id="2F92C9D0-F96B-FB80-26CD-32BB88CE9956">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VCODE" id="3A096E03-E8FE-FC0B-78E6-07CC423D14C5">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAY" id="799C4419-5C3B-38D4-5252-219B0E2682BC">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATE" id="C42FCB33-A555-986B-40ED-5E834D654AA2">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAKEDATE" id="DCD0D0E4-6FF0-3012-4183-398859457C41">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GENRE" id="FF0F7A96-6C20-6D89-4A3F-89BE42163340">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="VIDEO_VCODE_PK" id="45AF1E9D-060E-C664-A39F-E3E839E28736">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<schemaObject>D83AA2B6-01D5-742A-2D80-6BB66B919B1C</schemaObject>
+<segment>49B38071-90C0-D81E-BBA9-95C67DA3B13A</segment>
+<tableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="VIDEO_VCODE_PK" id="4EAD2D79-2E88-5882-F489-8ACBAC0A8619">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<segment>49B38071-90C0-D81E-BBA9-95C67DA3B13A</segment>
+<tableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</tableSpace>
+<existingIndex>45AF1E9D-060E-C664-A39F-E3E839E28736</existingIndex>
+<indexSegment>49B38071-90C0-D81E-BBA9-95C67DA3B13A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

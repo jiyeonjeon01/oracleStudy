@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0FD680AA-DEDF-16CD-5C57-F3F57EA5AAB7" schemaObject="D83AA2B6-01D5-742A-2D80-6BB66B919B1C" name="LENDRETURN">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LENDRETURN</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LRCODE" id="A88AD5A5-4AFE-D3EE-2689-A49691D55E6D">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LENDRETURN</sourceObjSchema>
+<sourceObjName>LRCODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LENDDATE" id="C51C7BB2-A135-E4D7-E730-95C45B780BD2">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LENDRETURN</sourceObjSchema>
+<sourceObjName>LENDDATE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RETURNDATE" id="17A53782-7737-EDFB-4BC6-374FA6A39A4B">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LENDRETURN</sourceObjSchema>
+<sourceObjName>RETURNDATE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTAL" id="127BF96F-0C9F-72C2-3564-2BE90EC2505C">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LENDRETURN</sourceObjSchema>
+<sourceObjName>TOTAL</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CCODE" id="EA678F9E-7421-33FB-EA75-B01B18D6D457">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LENDRETURN</sourceObjSchema>
+<sourceObjName>CCODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A5F3516-1023-B190-5FC3-83D06BBFCDCB" referredColumn="235BCB75-7C8E-B704-67F9-3E509E9690B9"/>
+</associations>
+</Column>
+<Column name="VCODE" id="073FA9CD-915F-B4FD-3B84-BE09ABB0D65A">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LENDRETURN</sourceObjSchema>
+<sourceObjName>VCODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E4A0DF7B-AA51-99A9-637A-431F24BB10D8" referredColumn="3A096E03-E8FE-FC0B-78E6-07CC423D14C5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="035D6708-FCBE-4F8A-EA7F-B925080C664D" name="LENDRETURN_LRCODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LENDRETURN_LRCODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A88AD5A5-4AFE-D3EE-2689-A49691D55E6D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23A79B32-F32D-4ABB-BDBE-FACBB48892DF" schemaObject="D83AA2B6-01D5-742A-2D80-6BB66B919B1C" name="LENDRETURN_LRCODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LENDRETURN_LRCODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A88AD5A5-4AFE-D3EE-2689-A49691D55E6D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="52D1DE53-0E43-712A-94BA-5EC42F7CF956" name="LENDRETURN_CCODE_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA678F9E-7421-33FB-EA75-B01B18D6D457"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05BC0B02-A1CA-990C-4C6D-97DA0545F894" name="LENDRETURN_VCODE_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="073FA9CD-915F-B4FD-3B84-BE09ABB0D65A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

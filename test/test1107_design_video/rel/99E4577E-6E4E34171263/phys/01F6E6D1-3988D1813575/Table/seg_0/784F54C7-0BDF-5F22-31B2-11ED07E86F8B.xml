@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="VCUSTOMER" directorySegmentName="seg_0" id="784F54C7-0BDF-5F22-31B2-11ED07E86F8B">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<schemaObject>D83AA2B6-01D5-742A-2D80-6BB66B919B1C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>F90444CB-2A2C-C8F0-AFF6-BF835407A91C</segment>
+<tableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="AGE" id="04E2E9B0-2870-5181-8BBD-D9968508DC91">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CCODE" id="235BCB75-7C8E-B704-67F9-3E509E9690B9">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE" id="D8596936-5BB2-1CC6-88F1-2A8756E62E3C">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="E87F8294-9127-10A8-85A0-294F14671FEE">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDR" id="EDB3A8A2-3FB4-0D0F-7C8E-2CE668EE5711">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="VCUSTOMER_CCODE_PK" id="6DE61474-B26D-D626-261A-77C124209405">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<schemaObject>D83AA2B6-01D5-742A-2D80-6BB66B919B1C</schemaObject>
+<segment>49B38071-90C0-D81E-BBA9-95C67DA3B13A</segment>
+<tableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="VCUSTOMER_CCODE_PK" id="91B29B83-039F-52EC-877A-6315077813CC">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:26:12 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<segment>49B38071-90C0-D81E-BBA9-95C67DA3B13A</segment>
+<tableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</tableSpace>
+<existingIndex>6DE61474-B26D-D626-261A-77C124209405</existingIndex>
+<indexSegment>49B38071-90C0-D81E-BBA9-95C67DA3B13A</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

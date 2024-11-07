@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="test1107_design_video" id="4AD38FA9-E2D0-8901-4F29-D6CE744CDF07" version="3.5">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:25:51 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4AD38FA9-E2D0-8901-4F29-D6CE744CDF07</designId>
+</OSDM_Design>
