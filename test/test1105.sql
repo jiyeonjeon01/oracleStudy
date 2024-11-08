@@ -29,6 +29,11 @@ select employee_id, first_name,
     else to_char(manager_id) end as manager_id
 from employees
 where manager_id is null;
+-- 선생님 VER 
+select nvl2(manager_id, manager_id, 'CEO') 
+from employees 
+where manager_id is null;
+
 -- 부서별에 따라 급여를 인상하도록 하자(직원번호, 직원명, 직급, 급여)
 -- 부서명이 marketing 인 직원은 5%, purchasing인 사원은 10%, 
 -- human resources인 사원은 15%, it인 직원은 20% 인상한다. 
@@ -36,6 +41,90 @@ select employee_id, first_name, department_id, salary,
         decode(department_id, 20, salary*1.05, 30, salary*1.1, 
         40, salary*1.15, 60, salary*1.2) as salary2
 from employees;
+
+-- 내꺼 고쳐준 ver 
+select employee_id, first_name, department_id, salary,
+        decode(upper(D.department_name), upper('Marketing'), salary*1.05, upper('Purchasing'), salary*1.1,
+        upper('Human resources'), salary*1.15, upper('IT'), salary*1.2) as salary2
+from employees E
+inner join departments D 
+    on E.department_id=D.department_id
+where upper(D.department_name) in (upper('Marketing'), upper('Purchasing'), upper('Human Resources'), upper('IT'))
+order by salary2 desc;
+
+-- 지피티 ver1
+SELECT E.employee_id, 
+       E.first_name, 
+       E.department_id, 
+       E.salary,
+       CASE 
+           WHEN upper(D.department_name) = 'MARKETING' THEN E.salary * 1.05
+           WHEN upper(D.department_name) = 'PURCHASING' THEN E.salary * 1.1
+           WHEN upper(D.department_name) = 'HUMAN RESOURCES' THEN E.salary * 1.15
+           WHEN upper(D.department_name) = 'IT' THEN E.salary * 1.2
+           ELSE E.salary
+       END AS salary2
+FROM employees E
+INNER JOIN departments D 
+    ON E.department_id = D.department_id
+WHERE upper(D.department_name) IN ('MARKETING', 'PURCHASING', 'HUMAN RESOURCES', 'IT')
+ORDER BY salary2 DESC;
+
+-- 지피티 ver2
+SELECT 
+    E.employee_id, 
+    E.first_name, 
+    E.department_id, 
+    E.salary,
+    DECODE(
+        UPPER(D.department_name), 
+        'MARKETING', E.salary * 1.05, 
+        'PURCHASING', E.salary * 1.10,
+        'HUMAN RESOURCES', E.salary * 1.15, 
+        'IT', E.salary * 1.20
+    ) AS salary2
+FROM 
+    employees E
+INNER JOIN 
+    departments D 
+    ON E.department_id = D.department_id
+WHERE 
+    UPPER(D.department_name) IN ('MARKETING', 'PURCHASING', 'HUMAN RESOURCES', 'IT')
+ORDER BY 
+    salary2 DESC;
+
+
+-- 선생님 ver
+select employee_id, first_name, salary, department_id 
+from employees;
+
+select * 
+from employees 
+inner join departments on employees.department_id= departments.department_id;
+
+select employee_id, first_name, job_id, salary, E.department_id, D.department_name,
+case when upper(D.department_name)=upper('Marketing') then salary*1.05
+     when upper(D.department_name)=upper('Purchasing') then salary*1.10
+     when upper(D.departmnet_name)=upper('Human Resources') then salary*1.15
+     when upper(D.department_name)=upper('IT') then salary*1.20
+     end newsalary
+from employees E
+inner join departments D 
+    on E.department_id=D.department_id
+where upper(D.department_name) in (upper('Marketing'), upper('Purchasing'), upper('Human Resources'), upper('IT'))
+order by newsalary desc;
+
+select employee_id, first_name, salary, job_id, A.department_id, B.department_name,
+case when B.department_name='Marketing' then salary*1.05
+     when B.department_name='Purchasing' then salary*1.10
+     when B.department_name='Human Resouces' then salary*1.15
+     when B.department_name='IT' then salary*1.20
+     end newsalary
+from employees A 
+inner join departments B 
+    on A.department_id = B.department_id
+where A.department_id in(20, 30, 40, 60);
+    
 
 -- --------------------------------------------------------------------------
 
