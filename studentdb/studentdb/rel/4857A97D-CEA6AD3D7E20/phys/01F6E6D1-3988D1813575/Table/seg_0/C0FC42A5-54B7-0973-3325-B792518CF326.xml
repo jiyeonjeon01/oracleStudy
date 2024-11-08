@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TRAINEE" directorySegmentName="seg_0" id="C0FC42A5-54B7-0973-3325-B792518CF326">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<schemaObject>48CD8E61-8DA4-0586-9755-9F9F4D065703</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>9D81EF60-6367-07A7-C2B7-6423E8A16AEA</segment>
+<tableSpace>25905A4B-02E5-4C01-9C59-EAC86D876805</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NO" id="10C94196-3A29-C1F6-4E74-E0248008B652">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SECTION" id="5D5F65E2-7BB7-231B-4811-ED6AD2E84A16">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NUM" id="70B445B1-2E80-A0E5-9AA0-E189E03FB6E1">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CODE" id="75C4B821-A900-BCE2-E795-C2548E15A6BA">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGISTER" id="87CE361C-217B-7D44-D7CE-2D1A9FB39934">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TRAINEE_NO_PK" id="E2B3FE74-DF87-6482-AFDF-7652BB8627FD">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<schemaObject>48CD8E61-8DA4-0586-9755-9F9F4D065703</schemaObject>
+<segment>FDC68A7D-44A3-2C0A-96DF-1C92830F3AFC</segment>
+<tableSpace>25905A4B-02E5-4C01-9C59-EAC86D876805</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRAINEE_STUDENT_CODE_FK" id="5CAE1D6B-CC01-EDD3-601C-AF791558AF1C">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRAINEE_SUBJECT_NUM_FK" id="76541FC8-7AB5-1A55-E5F4-E99A59CA1353">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TRAINEE_NO_PK" id="02287E42-5C8D-9B43-644B-25B9BF30B125">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<segment>FDC68A7D-44A3-2C0A-96DF-1C92830F3AFC</segment>
+<tableSpace>25905A4B-02E5-4C01-9C59-EAC86D876805</tableSpace>
+<existingIndex>E2B3FE74-DF87-6482-AFDF-7652BB8627FD</existingIndex>
+<indexSegment>FDC68A7D-44A3-2C0A-96DF-1C92830F3AFC</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

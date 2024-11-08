@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DD9B1798-BEFE-979A-D912-41F9EB704CF5" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="SUBJECT">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>SUBJECT</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteDesignID>6C94D719-F510-9F30-9E8F-8A666200958E</remoteDesignID>
+<remoteModelID>97DAF9D9-A938-2E8B-CC94-2D383F309AB5</remoteModelID>
+<remoteObjectID>050AA3B8-86E9-E1CB-A6E7-B63A6385BD9E</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\97DAF9D9-2D383F309AB5\table\seg_0\050AA3B8-86E9-E1CB-A6E7-B63A6385BD9E.xml</remoteObjectRelativeStorageName>
+<remoteSchemaName>HR</remoteSchemaName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODE" id="B33FA3AD-2055-B944-25AD-24233E9914A9">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>SUBJECT</sourceObjSchema>
+<sourceObjName>CODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>06AA2108-3958-A5EB-B062-BA411648FCCB</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementIncrementBy>10</autoIncrementIncrementBy>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="SUBNO" id="1AB302A8-1D87-5B6A-7BE9-6DB687390A10">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>SUBJECT</sourceObjSchema>
+<sourceObjName>SUBNO</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>13990114-26F3-9BD8-63C2-F6CAEBA60808</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,2,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="A5580037-E357-D06C-A666-76B47C6F3806">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>SUBJECT</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>E1AE906F-4A2F-BE60-3027-C6DC76CA5E10</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="62CC42C8-48DF-AB93-651E-31D0325F2FDB" name="SUBJECT_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>SUBJECT_CODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>63B508C3-A7E5-880B-FF7C-E0ADB6BF8143</remoteObjectID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B33FA3AD-2055-B944-25AD-24233E9914A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30021FF5-E660-63A8-B5FA-9226C10311CE" name="SUBJECT_SUBNO_UNIQUE">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>SUBJECT_SUBNO_UNIQUE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>C1CC5E1E-4154-492A-FC7A-7B62A3A0CBAA</remoteObjectID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AB302A8-1D87-5B6A-7BE9-6DB687390A10"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BC14011D-B967-623C-32C5-D910DD0B6DE6" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="SUBJECT_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>SUBJECT_CODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>BDDAC30C-4024-4CDD-5C61-3891DB98DB24</remoteObjectID>
+<remoteSchemaName>HR</remoteSchemaName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B33FA3AD-2055-B944-25AD-24233E9914A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4750BC8D-F0A0-0E69-1886-FAC42DDA5376" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="SUBJECT_SUBNO_UNIQUE">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>SUBJECT_SUBNO_UNIQUE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>0D05C6DC-792A-4331-0F1D-52480BEA4AF8</remoteObjectID>
+<remoteSchemaName>HR</remoteSchemaName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AB302A8-1D87-5B6A-7BE9-6DB687390A10"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

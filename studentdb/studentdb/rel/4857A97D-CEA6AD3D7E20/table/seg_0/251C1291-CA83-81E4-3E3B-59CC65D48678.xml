@@ -1,0 +1,175 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="251C1291-CA83-81E4-3E3B-59CC65D48678" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="LESSON">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LESSON</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteDesignID>6C94D719-F510-9F30-9E8F-8A666200958E</remoteDesignID>
+<remoteModelID>97DAF9D9-A938-2E8B-CC94-2D383F309AB5</remoteModelID>
+<remoteObjectID>15D5F406-B4CF-8BA6-4AF3-CB0A7B15C9BA</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\97DAF9D9-2D383F309AB5\table\seg_0\15D5F406-B4CF-8BA6-4AF3-CB0A7B15C9BA.xml</remoteObjectRelativeStorageName>
+<remoteSchemaName>HR</remoteSchemaName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODE" id="73A8234F-F74A-64CB-0BFE-FBCDBB240591">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>CODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>0193833A-8BA8-6D7C-4E8D-D723F3BF2F5A</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementStartWith>100</autoIncrementStartWith>
+<autoIncrementIncrementBy>10</autoIncrementIncrementBy>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="LSNO" id="896E3CEB-949D-14AE-ABA0-5D2B224DB8EB">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>LSNO</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>8B58E01B-A737-4871-17DE-5E50B4F76BD7</remoteObjectID>
+<constraintName>LESSON_LSNO_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;D&apos;" description=""/>
+<valueDef value="&apos;E&apos;" description=""/>
+<valueDef value="&apos;ED&apos;" description=""/>
+<valueDef value="&apos;H&apos;" description=""/>
+<valueDef value="&apos;K&apos;" description=""/>
+<valueDef value="&apos;M&apos;" description=""/>
+<valueDef value="&apos;P&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="E6CEEFC0-2F0E-CAA1-A6BA-1E422C19F9C8">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>19AC2ECB-3C55-C7BF-696C-2C199F9D0C1B</remoteObjectID>
+<constraintName>LESSON_NAME_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;교육학이론&apos;" description=""/>
+<valueDef value="&apos;국어&apos;" description=""/>
+<valueDef value="&apos;데이터베이스&apos;" description=""/>
+<valueDef value="&apos;수학&apos;" description=""/>
+<valueDef value="&apos;역사&apos;" description=""/>
+<valueDef value="&apos;영어&apos;" description=""/>
+<valueDef value="&apos;프로그래밍&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D455728D-5974-6A7D-CBAF-C8BE64B3308C" name="LESSON_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LESSON_CODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>617451E0-25D5-38BB-FB3F-ED7000CFA116</remoteObjectID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73A8234F-F74A-64CB-0BFE-FBCDBB240591"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4503F15-32FB-F04D-C9F3-37483D780376" name="LESSON_LSNO_UNIQUE">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LESSON_LSNO_UNIQUE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:49:58 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>DC416721-B696-F867-4B2D-B7AF88825849</remoteObjectID>
+<importedID>DD08C763-98BF-6CE7-3056-BE73B1E29099</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="896E3CEB-949D-14AE-ABA0-5D2B224DB8EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7514FEC-C6EB-E0B3-F6C6-DF21EB493D2D" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="LESSON_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LESSON_CODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>90687401-6757-B259-98AE-6024DE7F1EDC</remoteObjectID>
+<remoteSchemaName>HR</remoteSchemaName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="73A8234F-F74A-64CB-0BFE-FBCDBB240591"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C19FDE24-1F08-6FCD-545A-11B6988F62DB" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="LESSON_LSNO_UNIQUE">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LESSON_LSNO_UNIQUE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:49:58 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>3182BF09-CDBC-E5A2-D395-7C6E3B0617E8</remoteObjectID>
+<importedID>FCFE515B-3217-8176-E87F-7F44D9F47B81</importedID>
+<remoteSchemaName>HR</remoteSchemaName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="896E3CEB-949D-14AE-ABA0-5D2B224DB8EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="LESSON_LSNO_NAME_CK" directorySegmentName="seg_0" id="395CC7BB-F1A2-A785-873E-18B6A52F346A">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LESSON_LSNO_NAME_CK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:32 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<rule><![CDATA[
+        (LSNO = 'K' AND NAME = '국어') OR
+        (LSNO = 'M' AND NAME = '수학') OR
+        (LSNO = 'E' AND NAME = '영어') OR
+        (LSNO = 'H' AND NAME = '역사') OR
+        (LSNO = 'P' AND NAME = '프로그래밍') OR
+        (LSNO = 'D' AND NAME = '데이터베이스') OR
+        (LSNO = 'ED' AND NAME = '교육학이론')
+    ]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

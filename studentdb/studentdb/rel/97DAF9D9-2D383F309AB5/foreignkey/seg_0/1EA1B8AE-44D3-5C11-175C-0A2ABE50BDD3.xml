@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1EA1B8AE-44D3-5C11-175C-0A2ABE50BDD3" containerWithKeyObject="792C8006-FB8C-62EF-31D1-84BAD68185E9" localFKIndex="347AA036-67C2-E8D4-473E-1397ADADDFF8" name="TRAIN_STUNO_FK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN_STUNO_FK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<usedAsRemoteObject>true</usedAsRemoteObject>
+<referredTableLongName>HR.STUDENT</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>9FB7CE5E-C385-0891-1922-CB980A706BC5</referredTableID>
+<keyObject>DD08043B-D95B-8D2C-EBF9-BFCBEF5960E1</keyObject>
+<referredKeyID>DD08043B-D95B-8D2C-EBF9-BFCBEF5960E1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>STUNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

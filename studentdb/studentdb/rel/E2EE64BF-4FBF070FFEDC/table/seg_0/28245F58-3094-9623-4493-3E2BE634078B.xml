@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="28245F58-3094-9623-4493-3E2BE634078B" name="STUDENT">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:20:08 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="9B71AC32-46D5-E477-978A-844E426B7999">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:21:35 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODE" id="07A76DCB-09DB-3D8A-9715-D067FDB6DCC4">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:23:15 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUM" id="E5666209-1D38-3AE7-EAC4-6573A419785C">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:26:53 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D37D2B0D-38ED-7FD4-154D-04A363B57C71" referredColumn="06C6C542-551D-0975-A03E-F4217DE02EF3"/>
+</associations>
+</Column>
+<Column name="NAME" id="4DA7C2F0-170B-5402-6DA8-DFAC67868390">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:23:58 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID" id="68F24483-D546-155D-BB1F-A75BC777591A">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:25:00 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PWD" id="6E752FA7-D777-51A3-9EF3-9901B20A1D6E">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:25:21 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="JUMINNO" id="683FD59C-12A2-D823-5238-6D2DD5E6284A">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:27:53 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>13 CHAR</dataTypeSize>
+<ownDataTypeParameters>13 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE" id="3EB0FB14-B98E-017C-7560-0F403A46992A">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:28:41 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="8EA24C92-17FF-7736-B5D7-7DDFA2B55186">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:29:51 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="343CAC98-8AD1-123B-6C69-6DB9E33A9242">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:30:05 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENROLL" id="7923F6DB-3334-EC96-C7B5-8FB39967FF67">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:30:38 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B36328A7-B18C-4406-BDD2-35F5E0D58A6D" name="STUDENT_PK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:23:15 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07A76DCB-09DB-3D8A-9715-D067FDB6DCC4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AF876D4-BBA7-F9C4-CEFA-BDC893DD7614" name="STUDENT_SUBJECT_NUM_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:32:24 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5666209-1D38-3AE7-EAC4-6573A419785C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

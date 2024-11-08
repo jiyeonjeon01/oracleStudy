@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="444401CA-D0EC-4615-C1BC-6CED0B57B0DF" containerWithKeyObject="A86131C6-3FCC-AC7C-3E0E-796F1B2EA79C" localFKIndex="47D5596D-0500-C50B-2198-C188BEF91DB8" name="TRAIN_STUNO_FK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN_STUNO_FK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:49:58 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteDesignID>6C94D719-F510-9F30-9E8F-8A666200958E</remoteDesignID>
+<remoteModelID>97DAF9D9-A938-2E8B-CC94-2D383F309AB5</remoteModelID>
+<remoteObjectID>1EA1B8AE-44D3-5C11-175C-0A2ABE50BDD3</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\97DAF9D9-2D383F309AB5\foreignkey\seg_0\1EA1B8AE-44D3-5C11-175C-0A2ABE50BDD3.xml</remoteObjectRelativeStorageName>
+<importedID>06F57917-525F-9A5E-33E9-0918F91B74A6</importedID>
+<referredTableLongName>HR.STUDENT</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>0AA9912B-4ADA-6A1A-D025-6CDD11395689</referredTableID>
+<keyObject>3E4B9543-E88B-A3F6-E7D7-57DBDD4A0D0A</keyObject>
+<referredKeyID>3E4B9543-E88B-A3F6-E7D7-57DBDD4A0D0A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>STUNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

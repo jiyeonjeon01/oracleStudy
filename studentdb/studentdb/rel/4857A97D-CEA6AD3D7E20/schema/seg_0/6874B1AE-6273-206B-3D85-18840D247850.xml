@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="HR" directorySegmentName="seg_0" id="6874B1AE-6273-206B-3D85-18840D247850">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteDesignID>6C94D719-F510-9F30-9E8F-8A666200958E</remoteDesignID>
+<remoteModelID>97DAF9D9-A938-2E8B-CC94-2D383F309AB5</remoteModelID>
+<remoteObjectID>A61FFC2B-742D-9F97-F410-D794F6971F10</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\97DAF9D9-2D383F309AB5\schema\seg_0\A61FFC2B-742D-9F97-F410-D794F6971F10.xml</remoteObjectRelativeStorageName>
+<importedID>032B48A4-8FF7-D5E5-A2D3-B5C649DCA388</importedID>
+</SchemaObject>

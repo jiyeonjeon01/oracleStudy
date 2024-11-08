@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2F2ED75E-37C1-C614-0A0C-C496A799BC76" schemaObject="48CD8E61-8DA4-0586-9755-9F9F4D065703" name="LESSON">
+<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceObjSchema>STUDENTDB</sourceObjSchema>
+<sourceObjName>LESSON</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<importedID>A5CA5727-9EDC-E2F5-DF75-04EB37845DF4</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="9029C831-0F02-13F6-7B93-DB62B9E25099">
+<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>NO</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<importedID>07089E86-3DB4-B40A-FF12-F8DD7B07347B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUM" id="470A61C2-6B98-9386-CA56-337CF26DC3F9">
+<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>NUM</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<importedID>D64A6AFC-4C08-56B2-48A5-04C737CDF36E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="BD3B8223-0DBA-10BE-BC16-D637CD4E882A">
+<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceObjSchema>LESSON</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<importedID>6B7F7BC8-3DA4-076B-9E65-1B68FECBFA18</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A2FD2480-1376-4275-B895-E01B7AECC0A1" name="LESSON_PK">
+<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceObjSchema>STUDENTDB</sourceObjSchema>
+<sourceObjName>LESSON_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<importedID>05C70F57-E60D-DB31-5BC2-0B6BEF2BE752</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9029C831-0F02-13F6-7B93-DB62B9E25099"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FA98247B-F7FE-0924-847F-49B6102415A7" schemaObject="48CD8E61-8DA4-0586-9755-9F9F4D065703" name="LESSON_PK">
+<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceObjSchema>STUDENTDB</sourceObjSchema>
+<sourceObjName>LESSON_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<importedID>A482EEFB-BC72-0884-35E2-EA5DB28E7839</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9029C831-0F02-13F6-7B93-DB62B9E25099"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

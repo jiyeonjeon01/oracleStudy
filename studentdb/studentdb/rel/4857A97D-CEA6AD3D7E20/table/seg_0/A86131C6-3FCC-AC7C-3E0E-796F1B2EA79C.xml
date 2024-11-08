@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A86131C6-3FCC-AC7C-3E0E-796F1B2EA79C" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="TRAIN">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteDesignID>6C94D719-F510-9F30-9E8F-8A666200958E</remoteDesignID>
+<remoteModelID>97DAF9D9-A938-2E8B-CC94-2D383F309AB5</remoteModelID>
+<remoteObjectID>792C8006-FB8C-62EF-31D1-84BAD68185E9</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\97DAF9D9-2D383F309AB5\table\seg_0\792C8006-FB8C-62EF-31D1-84BAD68185E9.xml</remoteObjectRelativeStorageName>
+<remoteSchemaName>HR</remoteSchemaName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODE" id="CDE00546-F4C9-09CB-EE8A-405681C0F908">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAIN</sourceObjSchema>
+<sourceObjName>CODE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>5711923D-E6DB-C51B-3F8D-D7F4473379BB</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,5,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementStartWith>10000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="STUNO" id="85440F8D-67FB-9897-D69E-BE74370F6FB6">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAIN</sourceObjSchema>
+<sourceObjName>STUNO</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>608983AD-19C9-0DAC-8A44-3FD82319EBB3</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="444401CA-D0EC-4615-C1BC-6CED0B57B0DF" referredColumn="E80BEBDE-955F-E0C1-5DF6-C5E22DEC64A1"/>
+</associations>
+</Column>
+<Column name="LSNO" id="DDD38207-74AD-FB42-6295-DB84D9A55F64">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAIN</sourceObjSchema>
+<sourceObjName>LSNO</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>4B3724D0-E7E8-CE35-9D95-B15A8D6CB421</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0B94BDF8-1317-DD90-DFAE-CEF5502A0D79" referredColumn="896E3CEB-949D-14AE-ABA0-5D2B224DB8EB"/>
+</associations>
+</Column>
+<Column name="SECTION" id="E9EE96A3-F401-ED99-8998-26600B784A73">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAIN</sourceObjSchema>
+<sourceObjName>SECTION</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>ED513865-1A45-7A96-7F10-7532C0608427</remoteObjectID>
+<constraintName>TRAIN_SECTION_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;교양&apos;" description=""/>
+<valueDef value="&apos;부전공&apos;" description=""/>
+<valueDef value="&apos;전공&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TDATE" id="58C9FA7F-1292-63B7-4BE9-07CD6A3EB6E6">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>TRAIN</sourceObjSchema>
+<sourceObjName>TDATE</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>59B85DE6-72A2-1F6F-41F5-3C1500CC9C7F</remoteObjectID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="46641DCC-2A20-C2B8-601C-641BBDA54403" name="TRAIN_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN_CODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>2176EC59-01D0-535A-0CB9-F9DF83E4FFD3</remoteObjectID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDE00546-F4C9-09CB-EE8A-405681C0F908"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="65F242B0-7888-AB05-9020-3ADAFB7CF1DF" schemaObject="6874B1AE-6273-206B-3D85-18840D247850" name="TRAIN_CODE_PK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN_CODE_PK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteObjectID>A0CD80C7-26FC-1070-6612-5BDD4CFA4614</remoteObjectID>
+<remoteSchemaName>HR</remoteSchemaName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDE00546-F4C9-09CB-EE8A-405681C0F908"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5403D68-AB41-22C1-E173-9BE0B731ED90" name="TRAIN_LSNO_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:49:58 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDD38207-74AD-FB42-6295-DB84D9A55F64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="47D5596D-0500-C50B-2198-C188BEF91DB8" name="TRAIN_STUNO_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:49:58 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85440F8D-67FB-9897-D69E-BE74370F6FB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="TRAIN_SECTION_LSNO_CK" directorySegmentName="seg_0" id="D95573E1-6A72-FB63-45F5-C1699E5D7EF7">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN_SECTION_LSNO_CK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:32 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<rule><![CDATA[
+        (SECTION = '교양' AND LSNO IN ('K', 'M', 'E', 'H')) OR
+        (SECTION = '전공' AND LSNO IN ('P', 'D')) OR
+        (SECTION = '부전공')
+]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

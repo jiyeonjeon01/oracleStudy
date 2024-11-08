@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="03850B58-1317-FB32-52AB-CEC78601AFB0" containerWithKeyObject="792C8006-FB8C-62EF-31D1-84BAD68185E9" localFKIndex="84B4362F-A039-A2E7-3A48-BCD875086B3D" name="TRAIN_LSNO_FK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN_LSNO_FK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<usedAsRemoteObject>true</usedAsRemoteObject>
+<referredTableLongName>HR.LESSON</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>15D5F406-B4CF-8BA6-4AF3-CB0A7B15C9BA</referredTableID>
+<keyObject>DC416721-B696-F867-4B2D-B7AF88825849</keyObject>
+<referredKeyID>DC416721-B696-F867-4B2D-B7AF88825849</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>LSNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

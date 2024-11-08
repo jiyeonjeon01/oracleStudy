@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A70EF57E-C08B-D297-3B81-71E6207AA87A" name="TRAINEE">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:40:54 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="B575657F-C9BC-A746-B371-07DBF21F3F5F">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:41:15 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODE" id="DEC2515A-E469-6E5D-9F99-093C2D04C5AE">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:41:46 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13CAD602-661D-0749-9067-15022B52DA6E" referredColumn="07A76DCB-09DB-3D8A-9715-D067FDB6DCC4"/>
+</associations>
+</Column>
+<Column name="NUM" id="19CAEB97-742A-5ACB-A10C-EA82262DB490">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:42:17 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2C3814DD-9796-EBEA-0844-3A2F3EB1DFB4" referredColumn="06C6C542-551D-0975-A03E-F4217DE02EF3"/>
+</associations>
+</Column>
+<Column name="SECTION" id="06948FDC-792B-A869-C86C-D73B511A1F77">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:43:02 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGISTER" id="FA15AC82-EE60-E6ED-6896-A660642FCD34">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:43:29 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STUDENT_CODE" id="8E67FFEE-8ECF-319A-00AD-2E528D1DD7D8">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:44:19 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="75CEDAC3-4E1C-61A8-FF37-FF42F574E6BF" name="TRAINEE_PK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:43:59 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B575657F-C9BC-A746-B371-07DBF21F3F5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C596578-3509-CCD9-BAA0-0685DDE34A6F" name="TRAINEE_STUDENT_CODE_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:44:50 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEC2515A-E469-6E5D-9F99-093C2D04C5AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06677725-C01F-F4A0-0643-53470CFA3E69" name="TRAINEE_SUBJECT_NUM_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:46:23 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19CAEB97-742A-5ACB-A10C-EA82262DB490"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

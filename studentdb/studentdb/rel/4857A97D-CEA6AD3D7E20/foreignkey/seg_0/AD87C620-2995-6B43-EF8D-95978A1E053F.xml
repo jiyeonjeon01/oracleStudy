@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AD87C620-2995-6B43-EF8D-95978A1E053F" containerWithKeyObject="0AA9912B-4ADA-6A1A-D025-6CDD11395689" localFKIndex="AD935E6A-1B3D-2E8B-FC21-F7D739C72268" name="STUDENT_SUBNO_FK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>STUDENT_SUBNO_FK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:44:32 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteDesignID>6C94D719-F510-9F30-9E8F-8A666200958E</remoteDesignID>
+<remoteModelID>97DAF9D9-A938-2E8B-CC94-2D383F309AB5</remoteModelID>
+<remoteObjectID>EE2DFE43-E88A-C55A-2E04-5797BDB1FC4B</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\97DAF9D9-2D383F309AB5\foreignkey\seg_0\EE2DFE43-E88A-C55A-2E04-5797BDB1FC4B.xml</remoteObjectRelativeStorageName>
+<referredTableLongName>HR.SUBJECT</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>DD9B1798-BEFE-979A-D912-41F9EB704CF5</referredTableID>
+<keyObject>30021FF5-E660-63A8-B5FA-9226C10311CE</keyObject>
+<referredKeyID>30021FF5-E660-63A8-B5FA-9226C10311CE</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>SUBNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

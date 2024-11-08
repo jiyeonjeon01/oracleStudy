@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TRAIN" directorySegmentName="seg_0" id="792C8006-FB8C-62EF-31D1-84BAD68185E9">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<schemaObject>A61FFC2B-742D-9F97-F410-D794F6971F10</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>2E1C721F-896E-546F-005B-1B08717A93AA</segment>
+<tableSpace>25905A4B-02E5-4C01-9C59-EAC86D876805</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="LSNO" id="4B3724D0-E7E8-CE35-9D95-B15A8D6CB421">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CODE" id="5711923D-E6DB-C51B-3F8D-D7F4473379BB">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="TDATE" id="59B85DE6-72A2-1F6F-41F5-3C1500CC9C7F">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STUNO" id="608983AD-19C9-0DAC-8A44-3FD82319EBB3">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SECTION" id="ED513865-1A45-7A96-7F10-7532C0608427">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TRAIN_CODE_PK" id="A0CD80C7-26FC-1070-6612-5BDD4CFA4614">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<schemaObject>A61FFC2B-742D-9F97-F410-D794F6971F10</schemaObject>
+<segment>D738489B-EE06-915F-6881-491CC92A36BA</segment>
+<tableSpace>25905A4B-02E5-4C01-9C59-EAC86D876805</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRAIN_STUNO_FK" id="347AA036-67C2-E8D4-473E-1397ADADDFF8">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRAIN_LSNO_FK" id="84B4362F-A039-A2E7-3A48-BCD875086B3D">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TRAIN_CODE_PK" id="2176EC59-01D0-535A-0CB9-F9DF83E4FFD3">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<segment>D738489B-EE06-915F-6881-491CC92A36BA</segment>
+<tableSpace>25905A4B-02E5-4C01-9C59-EAC86D876805</tableSpace>
+<existingIndex>A0CD80C7-26FC-1070-6612-5BDD4CFA4614</existingIndex>
+<indexSegment>D738489B-EE06-915F-6881-491CC92A36BA</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="TRAIN_SECTION_LSNO_CK" id="DBC9B740-8AD6-245C-7ACD-18C213F5098B">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:10:33 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev20c>

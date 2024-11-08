@@ -1,0 +1,24 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0B94BDF8-1317-DD90-DFAE-CEF5502A0D79" containerWithKeyObject="A86131C6-3FCC-AC7C-3E0E-796F1B2EA79C" localFKIndex="B5403D68-AB41-22C1-E173-9BE0B731ED90" name="TRAIN_LSNO_FK">
+<sourceConnName>로컬-HR</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>TRAIN_LSNO_FK</sourceObjName>
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 01:49:58 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<remoteDesignID>6C94D719-F510-9F30-9E8F-8A666200958E</remoteDesignID>
+<remoteModelID>97DAF9D9-A938-2E8B-CC94-2D383F309AB5</remoteModelID>
+<remoteObjectID>03850B58-1317-FB32-52AB-CEC78601AFB0</remoteObjectID>
+<remoteObjectRelativeStorageName>\rel\97DAF9D9-2D383F309AB5\foreignkey\seg_0\03850B58-1317-FB32-52AB-CEC78601AFB0.xml</remoteObjectRelativeStorageName>
+<importedID>D05651D2-0AAE-73AD-5940-D01213E541BD</importedID>
+<referredTableLongName>HR.LESSON</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>251C1291-CA83-81E4-3E3B-59CC65D48678</referredTableID>
+<keyObject>E4503F15-32FB-F04D-C9F3-37483D780376</keyObject>
+<referredKeyID>E4503F15-32FB-F04D-C9F3-37483D780376</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>LSNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36A6330C-F169-25C0-83B6-5CE267B0B14A" name="LESSON">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:37:10 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="A2575478-1611-C23A-214E-BE4E0255D9F8">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:38:04 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUM" id="23C605F4-D16F-872B-A60F-B23D64A5EB0C">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:38:04 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="19FDC9C6-8ECF-5C81-32F8-EE8BD4262120" referredColumn="06C6C542-551D-0975-A03E-F4217DE02EF3"/>
+</associations>
+</Column>
+<Column name="NAME" id="A6C428FF-3941-74A2-4D24-7C70BFA7AD0E">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:39:20 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9DF77F4-9779-5D52-5033-65EC1E095531" name="LESSON_PK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:38:04 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2575478-1611-C23A-214E-BE4E0255D9F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F1C4816A-E530-3F26-E17C-9221875E5208" name="LESSON_SUBJECT_NUM_FK">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 02:40:31 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23C605F4-D16F-872B-A60F-B23D64A5EB0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
