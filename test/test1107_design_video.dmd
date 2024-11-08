@@ -5,4 +5,18 @@
 <ownerDesignName>test1107_design_video</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>4AD38FA9-E2D0-8901-4F29-D6CE744CDF07</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="35A9D9CC-50DB-9BB4-ABE0-EE547DAA7C53">
+<designStoragePath>C:\Users\PC\oracleStudy\test</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="05C5F7C3-004C-6E11-C91C-830D88E4CFB3">
+<designStoragePath>C:\Users\PC\oracleStudy\test</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="391F4555-826F-8DB9-45EB-29203DB8FBAB">
+<designStoragePath>C:\Users\PC\oracleStudy\test</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="31066BB2-911D-09FE-C5A3-E248B15309DD">
+<designStoragePath>C:\Users\PC\oracleStudy\test</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>
