@@ -6,6 +6,13 @@
 <createdBy>PC</createdBy>
 <createdTime>2024-11-07 09:26:12 UTC</createdTime>
 <ownerDesignName>test1107_design_video</ownerDesignName>
+<dsInitialExtent>65536</dsInitialExtent>
+<dsMaxExtents>2147483645</dsMaxExtents>
 <emUniformSize>0</emUniformSize>
 <extentManagement>LOCAL</extentManagement>
+<minExtLen>65536</minExtLen>
+<dsCompression>NOCOMPRESS</dsCompression>
+<encrypt>NO</encrypt>
+<fileType>SMALLFILE</fileType>
+<inMemory>NO</inMemory>
 </TableSpaceOraclev10g>

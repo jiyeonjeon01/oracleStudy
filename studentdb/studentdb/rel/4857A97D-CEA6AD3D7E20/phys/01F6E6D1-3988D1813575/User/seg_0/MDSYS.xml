@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="MDSYS" directorySegmentName="seg_0" id="MDSYS">
-<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceConnName>로컬-HOSPITAL</sourceConnName>
 <sourceObjName>MDSYS</sourceObjName>
 <createdBy>PC</createdBy>
 <createdTime>2024-11-08 01:44:19 UTC</createdTime>
@@ -19,6 +19,16 @@
 <QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem3" id="E2FC386D-E7DC-F2B3-606B-BC6120CF984A">
 <createdBy>PC</createdBy>
 <createdTime>2024-11-08 03:40:28 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem2" id="BA6229D7-05D8-54F6-A45E-8B0D77ED1490">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 08:08:55 UTC</createdTime>
+<ownerDesignName>studentdb</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem3" id="8F93726D-5441-A89F-1657-E570CF59DD8B">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-08 08:08:55 UTC</createdTime>
 <ownerDesignName>studentdb</ownerDesignName>
 </QuotaItem>
 </quotaItems>

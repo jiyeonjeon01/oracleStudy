@@ -6,4 +6,14 @@
 <createdTime>2024-11-07 09:26:12 UTC</createdTime>
 <ownerDesignName>test1107_design_video</ownerDesignName>
 <schemaObject>D83AA2B6-01D5-742A-2D80-6BB66B919B1C</schemaObject>
+<defTableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</defTableSpace>
+<privileges>CREATE DATABASE LINK, CREATE SEQUENCE, CREATE VIEW, CREATE SYNONYM, UNLIMITED TABLESPACE, ALTER SESSION, CREATE SESSION</privileges>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="01E566C1-DB1C-1363-4E90-1E364BF2DACB">
+<createdBy>PC</createdBy>
+<createdTime>2024-11-07 09:42:16 UTC</createdTime>
+<ownerDesignName>test1107_design_video</ownerDesignName>
+<tableSpace>FCF0657B-9E63-AD0C-9DAE-598F86D2A7B6</tableSpace>
+</QuotaItem>
+</quotaItems>
 </UserOraclev10g>

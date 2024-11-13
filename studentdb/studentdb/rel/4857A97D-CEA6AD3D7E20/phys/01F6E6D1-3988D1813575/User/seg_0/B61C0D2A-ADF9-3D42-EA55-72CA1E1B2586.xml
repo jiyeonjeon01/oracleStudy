@@ -1,9 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="STUDENTDB" directorySegmentName="seg_0" id="B61C0D2A-ADF9-3D42-EA55-72CA1E1B2586">
-<sourceConnName>로컬-STUDENTDB</sourceConnName>
+<sourceConnName>로컬-HOSPITAL</sourceConnName>
 <sourceObjName>STUDENTDB</sourceObjName>
 <createdBy>PC</createdBy>
 <createdTime>2024-11-08 03:40:21 UTC</createdTime>
 <ownerDesignName>studentdb</ownerDesignName>
 <schemaObject>48CD8E61-8DA4-0586-9755-9F9F4D065703</schemaObject>
+<defTableSpace>25905A4B-02E5-4C01-9C59-EAC86D876805</defTableSpace>
+<privileges>UNLIMITED TABLESPACE</privileges>
+<profile>DEFAULT</profile>
 </UserOraclev10g>
