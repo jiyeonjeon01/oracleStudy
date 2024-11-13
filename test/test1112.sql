@@ -182,7 +182,17 @@ from employees e
 order by department_id;
 ------------------------------------------------------------------------------------------------------------
 -- 풀이
+select round(avg(salary)) 
+from employees s
+where department_id=90
+group by department_id;
 
+select first_name, salary, e.department_id, 
+(select round(avg(salary))
+from employees 
+where department_id=e.department_id
+group by department_id) as "부서평균급여"
+from employees e;
 
 
 
