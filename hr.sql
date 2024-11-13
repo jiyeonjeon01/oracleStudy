@@ -55,6 +55,39 @@ select department_id, max(salary) from employees where department_id>=70 group b
 select department_id, max(salary), min(salary), sum(salary), round(avg(salary),1), 
 count(salary) from employees where department_id>=70 group by department_id having sum(salary)>=30000;
 select max(salary), round(avg(salary),1), sum(salary) from employees;
+
+-- 03년도에 입사한 사원 알아내기
+Select 입사년도, 사원이름 from employees where TO_CHAR(hire_date, ‘YY’) = ‘03’;  
+select hire_date, TO_CHAR(hire_date,'YY/MM/DD HH24:MI:SS'),  TO_CHAR(hire_date,'MI')  from employees;
+select TO_DATE('20041214','YYYY/MM/DD')+1 from dual; 
+
+-- 이름이 k로 끝나는 직원을 검색
+select first_name from employees;
+select first_name from employees where first_name like '%k';
+select first_name from employees where upper(substr(first_name, LENGTH(first_name),1)) = UPPER('k');
+
+-- 현재시간표현
+select sysdate from dual;
+select to_char(sysdate,'YYYY/MM/DD HH24:MI:SS') from dual;
+select FLOOR(sysdate - TO_DATE('2024/11/05', 'YYYY/MM/DD')) from dual;
+
+-- 숫자를 우리가 원하는 형식으로 출력하기 1234567.23 => $1,234,567.23
+select trim(to_char(1234567.23, 'L999,999,999,999.99')) as money from dual; 
+select first_name, trim(to_char(salary, 'L999,999,999,999.99')) as salary from employees; 
+
+-- 문자 + 문자 = 숫자
+select to_number('10,000', '999,999') + to_number('20,000','999,999') from dual;
+select to_number('10,000', '999999') from dual;
+
+-- NVL
+select first_name, salary, commission_pct, job_id from employees order by job_id;
+select first_name, salary, nvl(commission_pct,0) commission_pct, job_id from employees order by job_id;
+
+-- NVL2(대상, 널이아닐때 적용될값, 널일때 적용될값)
+select first_name, salary, commission_pct, salary+(salary*commission_pct) as total from employees; 
+select first_name, salary, commission_pct, salary+(salary*NVL(commission_pct,0)) as total from employees;
+select first_name, salary, commission_pct, salary+(salary*NVL2(commission_pct,commission_pct, 0)) as total from employees;
+
 -- 문자열 일부만 추출 substr(대상, 시작위치, 추출갯수)
 select substr('DATABASE', 1, 3) from dual;
 -- 20번 부서에서 사원들의 입사년도 가져오기
