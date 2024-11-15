@@ -1,0 +1,119 @@
+-- PL/SQL
+-- DEPARTMENTS 에서 반복문을 이용해서 부서 10, 20, 30, 40 정보를 반대로 출력하시오 
+DECLARE 
+    VDEPARTMENTS DEPARTMENTS%ROWTYPE;
+BEGIN
+    FOR I IN REVERSE 1..9 LOOP
+        SELECT * INTO VDEPARTMENTS FROM DEPARTMENTS WHERE DEPARTMENT_ID=I*10;
+        DBMS_OUTPUT.PUT_LINE(VDEPARTMENTS.DEPARTMENT_ID || ' / ' || VDEPARTMENTS.DEPARTMENT_NAME);
+        END LOOP;
+END;
+/
+
+SELECT * FROM DEPARTMENTS WHERE DEPARTMENT_ID=10;
+SELECT * FROM DEPARTMENTS WHERE DEPARTMENT_ID=20;
+SELECT * FROM DEPARTMENTS WHERE DEPARTMENT_ID=30;
+SELECT * FROM DEPARTMENTS WHERE DEPARTMENT_ID=40;
+
+
+-- 구구단 출력하기 .. VER.1
+DECLARE 
+    NUM1 NUMBER := 1;
+    NUM2 NUMBER := 0;
+BEGIN
+    LOOP
+        NUM2 := NUM2 + 1;
+        NUM1 := 1;
+        LOOP
+            DBMS_OUTPUT.PUT_LINE(NUM2 || ' * ' || NUM1 || ' = ' || NUM1*NUM2);
+            NUM1 := NUM1 + 1;
+            IF NUM1 > 9 THEN
+                EXIT;
+            END IF;
+        END LOOP;
+        
+        IF NUM2 > 9 THEN
+            EXIT;
+        END IF;
+    END LOOP;
+END;
+/
+
+-- 구구단 출력하기 .. VER.2
+DECLARE
+    I NUMBER(2); 
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('구구단');
+    DBMS_OUTPUT.PUT_LINE('------------------');
+    FOR I IN 1..9 LOOP
+        FOR J IN 1..9 LOOP
+            DBMS_OUTPUT.PUT_LINE( I || ' X ' || J || ' = '||  I*J);
+        END LOOP;
+        DBMS_OUTPUT.PUT_LINE('------------------');
+    END LOOP;
+END;
+/
+
+-- PL/SQL 
+-- DEPARTMENTS 테이블에 전체내용을 CURSOR 저장하고 FETCH해서 전체정보를 출력하시오.
+DECLARE
+    VDEP DEPARTMENTS%ROWTYPE;
+    -- CURSOR C1 IS SELECT * FROM DEPARTMENTS; 
+BEGIN
+    FOR  VDEP IN  (SELECT * FROM DEPARTMENTS) LOOP
+        DBMS_OUTPUT.PUT_LINE(VDEP.DEPARTMENT_ID || ' / ' || VDEP.DEPARTMENT_NAME); 
+    END LOOP;
+
+    /* *****************************************
+    OPEN C1; 
+    LOOP
+        FETCH C1 INTO VDEP.DEPARTMENT_ID, VDEP.DEPARTMENT_NAME, VDEP.MANAGER_ID, VDEP.LOCATION_ID;
+        EXIT WHEN C1%NOTFOUND; 
+        DBMS_OUTPUT.PUT_LINE(VDEP.DEPARTMENT_ID || ' / ' || VDEP.DEPARTMENT_NAME); 
+    END LOOP; 
+    CLOSE C1; 
+    *********************************************/
+END;
+/
+
+
+
+-- PL/SQL
+-- EMPLOYEES 테이블에서 요구한 부서별 정보 CURSOR에 저장하고 
+-- 각 해당되는 부서별 요청시 해당되는 부서정보 출력
+SELECT * FROM EMPLOYEES WHERE DEPARTMENT_ID=30;
+SELECT DISTINCT DEPARTMENT_ID FROM EMPLOYEES ORDER BY DEPARTMENT_ID;
+-------------------------
+DECLARE
+    VEMP_ROWTYPE EMPLOYEES%ROWTYPE;
+    VSALARY VARCHAR2(20);
+    VNO NUMBER(4);
+    --부서별로 정로를 저장할 수 있는 커서 생성
+   CURSOR C1(VDEPTNO EMPLOYEES.DEPARTMENT_ID%TYPE)
+   IS SELECT*FROM EMPLOYEES WHERE DEPARTMENT_ID = VDEPTNO;
+BEGIN
+    -- 부서별 정보를 생성 시킨다. 랜덤값으로
+    VNO := ROUND(DBMS_RANDOM.VALUE(10, 110),-1);
+    -- 부서 번호 40번 종료해라 
+    IF (VNO = 40) THEN
+        DBMS_OUTPUT.PUT_LINE(VNO || '해당되지 않는 부서번호입니다.');
+        RETURN;
+    END IF;
+    --부서별 정보를 가져와서 월급에 대해 평가 진행
+    FOR VEMP_ROWTYPE IN C1(VNO) LOOP
+        IF VEMP_ROWTYPE.SALARY BETWEEN 1 AND 3000 THEN
+            VSALARY := '낮음';
+        ELSIF VEMP_ROWTYPE.SALARY BETWEEN 3001 AND 5000 THEN
+            VSALARY := '중간';
+        ELSIF VEMP_ROWTYPE.SALARY BETWEEN 5001 AND 8000 THEN
+            VSALARY := '높음';
+        ELSE
+            VSALARY := '최고';
+        END IF;
+        DBMS_OUTPUT.PUT_LINE(VEMP_ROWTYPE.FIRST_NAME || ' / ' || VEMP_ROWTYPE.SALARY || ' / ' || VSALARY);
+    END LOOP;   
+END;
+/
+
+
+
