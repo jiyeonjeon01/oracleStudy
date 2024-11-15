@@ -186,17 +186,17 @@ end;
 
 -- 구구단 -------------------------
 declare 
-    num1 number := 3;
-    num2 number := 1;
+    -- num0 number := 3;
+    num1 number := 1;
     dan number := 0;
 begin
     loop
         dan := dan + 1;
-        num2 := 1;
+        num1 := 1;
         loop 
-         dbms_output.put_line(dan || ' * ' || num2 || ' = ' || dan * num2 );
-         num2 := num2 + 1;
-        if num2 > 9 then
+         dbms_output.put_line(dan || ' * ' || num1 || ' = ' || dan * num1 );
+         num1 := num1 + 1;
+        if num1 > 9 then
             exit;
         end if;
     end loop;
