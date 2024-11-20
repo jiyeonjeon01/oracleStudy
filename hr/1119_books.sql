@@ -21,6 +21,8 @@ INSERT INTO books (id, title, publisher, year, price) VALUES (books_id_seq.nextv
 INSERT INTO books (id, title, publisher, year, price) VALUES (books_id_seq.nextval, 'Head First PHP and MYSQL', 'OReilly', '2009', 58000);
 INSERT INTO books (id, title, publisher, year, price) VALUES (books_id_seq.nextval, 'C Programming Language', 'Prentice-Hall', '1989', 35000);
 INSERT INTO books (id, title, publisher, year, price) VALUES (books_id_seq.nextval, 'Head First SQL', 'OReilly', '2007', 43000);
+
+update books set title = 'kkk', publisher = 'java', year = '2024', price = 33000 where id = 3;
 commit;
 
 select * from books;
