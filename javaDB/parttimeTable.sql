@@ -1,0 +1,37 @@
+-- 테이블 정의
+DROP TABLE PARTTIME;
+CREATE TABLE PARTTIME (
+    ID NUMBER(4), -- 알바생 아이디
+    NAME VARCHAR2(10) NOT NULL, -- 알바생 이름
+    WAGE NUMBER(5)NOT NULL, -- 시급
+    CHECKIN DATE NOT NULL, -- 출근 시간
+    CHECKOUT DATE NOT NULL, -- 퇴근 시간
+    HOURS NUMBER(2, 1), -- 하루동안 일한 시간
+    PAY NUMBER(6) -- 하루에 받는 임금
+);    
+ALTER TABLE PARTTIME ADD CONSTRAINT ID_PARTTIME_PK PRIMARY KEY(ID); 
+
+-- 시퀀스 정의 
+DROP SEQUENCE PARTTIME_ID_SEQ;
+CREATE SEQUENCE PARTTIME_ID_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+COMMIT;
+
+-- 출근시간, 퇴근시간을 기록하면 하루동안 일한 시간과 임금이 자동 계산되어 입력되는 트리거
+CREATE OR REPLACE TRIGGER PARTTIME_PAY_TRIGGER
+BEFORE INSERT OR UPDATE ON PARTTIME
+FOR EACH ROW
+BEGIN
+    -- 출근시간과 퇴근시간이 모두 존재할 경우만 계산
+    IF :NEW.CHECKIN IS NOT NULL AND :NEW.CHECKOUT IS NOT NULL THEN
+        -- HOURS: 퇴근시간 - 출근시간을 시간 단위로 계산
+        :NEW.HOURS := ROUND((:NEW.CHECKOUT - :NEW.CHECKIN) * 24, 1);
+        -- PAY: HOURS * WAGE를 계산
+        :NEW.PAY := :NEW.HOURS * :NEW.WAGE;
+    END IF;
+END;
+/
+
+COMMIT;
