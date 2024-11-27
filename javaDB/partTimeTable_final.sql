@@ -1,16 +1,17 @@
--- 부서 테이블 (경영, 주방, 서빙 등)
+-- 부서 테이블 (주방, 서빙 등)
 -- 직원 테이블 (직원정보, 시급)
 -- 일한시간 테이블 (출근 시간, 퇴근 시간 등)
 -- 지급 내역 테이블 (직원정보, 지급 내역 등)
 
 
--- 1) 부서 테이블 (경영, 주방, 서빙)----------
+-- 1) 부서 테이블 (주방, 서빙)----------
 DROP TABLE DEPARTMENT;
 CREATE TABLE DEPARTMENT(
     DEPID NUMBER, -- PK, 부서ID
     DEPNAME VARCHAR2(20) NOT NULL -- 부서 이름 
 );
 ALTER TABLE DEPARTMENT ADD CONSTRAINT DEPARTMENT_DEPID_PK PRIMARY KEY(DEPID);
+--ALTER TABLE DEPARTMENT ADD CONSTRAINT DEPARTMENT_DEPNAME_CHECK CHECK (DEPNAME IN ('주방', '홀'));
 
 DROP SEQUENCE DEPARTMENT_SEQ;
 CREATE SEQUENCE DEPARTMENT_SEQ
@@ -26,11 +27,11 @@ CREATE TABLE EMPLOYEE(
     EMPID NUMBER, -- PK, 직원ID
     NAME VARCHAR2(20) NOT NULL,-- 직원 이름
     RAGE NUMBER NOT NULL, -- 시급
-    FKDEPID NUMBER NOT NULL -- FK, 부서ID
+    E_DEPNAME VARCHAR2(20) NOT NULL -- FK, 부서 이름 
 );    
 ALTER TABLE EMPLOYEE ADD CONSTRAINT EMPLOYEE_EMPID_PK PRIMARY KEY(EMPID);
-ALTER TABLE EMPLOYEE ADD CONSTRAINT EMPLOYEE_DEPARTMENT_DEPID_FK
-    FOREIGN KEY(FKDEPID) REFERENCES DEPARTMENT(DEPID) ON DELETE CASCADE;
+ALTER TABLE EMPLOYEE ADD CONSTRAINT EMPLOYEE_DEPARTMENT_DEPNAME_FK
+    FOREIGN KEY(E_DEPNAME) REFERENCES DEPARTMENT(DEPNAME) ON DELETE CASCADE;
 
 DROP SEQUENCE EMPLOYEE_SEQ;
 CREATE SEQUENCE EMPLOYEE_SEQ
@@ -43,13 +44,13 @@ INCREMENT BY 1;
 -- 3) 일한시간 테이블 (출근 시간, 퇴근 시간)-----------------------------
 DROP TABLE WORKHOUR;
 CREATE TABLE WORKHOUR(
-    WHID NUMBER, --PK, 근무시간ID 
-    WDATE DATE  NOT NULL, -- 근무 날짜
-    CHECKIN TIMESTAMP NOT NULL, --  출근 시간 
-    CHECKOUT TIMESTAMP NOT NULL, -- 퇴근 시간
-    WH_EMPID NUMBER NOT NULL, -- FK, 직원ID
-    HOURS NUMBER(2, 1) NOT NULL, -- 퇴근시간-출근시간(일한시간)
-    AMOUNT NUMBER NOT NULL -- 임금(시급*일한시간)
+    WHID NUMBER, -- PK, 근무시간ID
+    WDATE DATE, -- 근무 날짜
+    CHECKIN NUMBER(2) NOT NULL, -- 출근 시간 (0-23)
+    CHECKOUT NUMBER(2) NOT NULL, -- 퇴근 시간 (0-23)
+    WH_EMPID NUMBER, -- FK, 직원ID
+    HOURS NUMBER(4, 1), -- 일한 시간 (소수점 1자리)
+    AMOUNT NUMBER(10, 2) -- 임금 (시급 * 일한 시간)
 );
 ALTER TABLE WORKHOUR ADD CONSTRAINT WORKHOUR_WHID_PK PRIMARY KEY(WHID);
 ALTER TABLE WORKHOUR ADD CONSTRAINT WORKHOUR_EMPLOYEE_EMPID_FK
@@ -60,6 +61,7 @@ CREATE SEQUENCE WORKHOUR_SEQ
 START WITH 1
 INCREMENT BY 1;
 
+
 --INSERT INTO WORKHOUR VALUES (WORKHOUR_SEQ.NEXTVAL, ?, ?, ?);
 
 
@@ -69,17 +71,16 @@ CREATE TABLE HISTORY (
     HISTORYID NUMBER, -- PK, 지급 기록 ID
     H_EMPID NUMBER NOT NULL,  -- FK, 직원 ID
     H_WHID NUMBER NOT NULL,  -- FK, 근무시간 ID
-    PAY_DATE DATE NOT NULL,   -- 지급 날짜
-    AMOUNT NUMBER NOT NULL,   -- 지급 금액
-    METHOD VARCHAR2(20),  -- 지급 방식 (현금, 계좌 이체 등)
-    STATUS VARCHAR2(10)  -- 지급 상태 (완료, 대기 등)
+    STATUS VARCHAR2(10) NOT NULL,  -- 지급 상태 (완료, 미완료 등)
+    PAY_DATE DATE,   -- 지급 날짜
+    METHOD VARCHAR2(20)  -- 지급 방식 (현금, 계좌 이체 등)
 );
 ALTER TABLE HISTORY ADD CONSTRAINT HISTORY_HISTORYID_PK PRIMARY KEY (HISTORYID);
 ALTER TABLE HISTORY ADD CONSTRAINT HISTORY_EMPLOYEE_EMPID_FK
     FOREIGN KEY (H_EMPID) REFERENCES EMPLOYEE(EMPID) ON DELETE CASCADE;
 ALTER TABLE HISTORY ADD CONSTRAINT HISTORY_WORKHOUR_WHID_FK 
     FOREIGN KEY(H_WHID) REFERENCES WORKHOUR(WHID) ON DELETE CASCADE;
-ALTER TABLE HISTORY ADD CONSTRAINT HISTORY_STATUS_CHECK CHECK (STATUS IN ('완료', '대기'));
+ALTER TABLE HISTORY ADD CONSTRAINT HISTORY_STATUS_CHECK CHECK (STATUS IN ('완료', '미완료'));
 
 DROP SEQUENCE HISTORY_SEQ;
 CREATE SEQUENCE HISTORY_SEQ
@@ -91,26 +92,134 @@ INCREMENT BY 1;
 
 COMMIT;
 
+--CREATE OR REPLACE TRIGGER WORKHOUR_TRIGGER
+--BEFORE INSERT OR UPDATE ON WORKHOUR
+--FOR EACH ROW
+--BEGIN
+--    -- 출근 시간과 퇴근 시간이 모두 존재하는 경우에만 계산
+--    IF :NEW.CHECKIN IS NOT NULL AND :NEW.CHECKOUT IS NOT NULL THEN
+--        -- 일한 시간(HOURS) 계산: (퇴근 시간 - 출근 시간) * 24
+--        -- CHECKIN과 CHECKOUT의 차이는 날짜 간의 간격이므로, 이 값을 정확히 계산하려면 TO_NUMBER로 변환
+--        :NEW.HOURS := ROUND((TO_NUMBER(:NEW.CHECKOUT - :NEW.CHECKIN) * 24), 1);
+--
+--        -- 임금(AMOUNT) 계산: 직원의 시급(RAGE) * 일한 시간(HOURS)
+--        SELECT RAGE 
+--        INTO :NEW.AMOUNT 
+--        FROM EMPLOYEE 
+--        WHERE EMPID = :NEW.WH_EMPID;
+--
+--        :NEW.AMOUNT := :NEW.AMOUNT * :NEW.HOURS;
+--    END IF;
+--END;
+--/
+
 CREATE OR REPLACE TRIGGER WORKHOUR_TRIGGER
 BEFORE INSERT OR UPDATE ON WORKHOUR
 FOR EACH ROW
 BEGIN
-    -- 출근 시간과 퇴근 시간이 모두 존재하는 경우에만 계산
-    IF :NEW.CHECKIN IS NOT NULL AND :NEW.CHECKOUT IS NOT NULL THEN
-        -- 일한 시간(HOURS) 계산: (퇴근 시간 - 출근 시간) * 24
-        -- CHECKIN과 CHECKOUT의 차이는 날짜 간의 간격이므로, 이 값을 정확히 계산하려면 TO_NUMBER로 변환
-        :NEW.HOURS := ROUND((TO_NUMBER(:NEW.CHECKOUT - :NEW.CHECKIN) * 24), 1);
+    -- 출근 시간과 퇴근 시간이 모두 존재하고 퇴근 시간이 출근 시간보다 클 경우에만 계산
+    IF :NEW.CHECKIN IS NOT NULL AND :NEW.CHECKOUT IS NOT NULL AND :NEW.CHECKOUT > :NEW.CHECKIN THEN
+        -- 일한 시간 (HOURS) 계산: (퇴근 시간 - 출근 시간)
+        :NEW.HOURS := :NEW.CHECKOUT - :NEW.CHECKIN;
 
-        -- 임금(AMOUNT) 계산: 직원의 시급(RAGE) * 일한 시간(HOURS)
-        SELECT RAGE 
-        INTO :NEW.AMOUNT 
-        FROM EMPLOYEE 
-        WHERE EMPID = :NEW.WH_EMPID;
+        -- 직원의 시급 (RAGE) 가져오기
+        DECLARE
+            v_rage NUMBER;
+        BEGIN
+            SELECT RAGE
+            INTO v_rage
+            FROM EMPLOYEE
+            WHERE EMPID = :NEW.WH_EMPID;
 
-        :NEW.AMOUNT := :NEW.AMOUNT * :NEW.HOURS;
+            -- 임금 (AMOUNT) 계산: 시급 * 일한 시간
+            :NEW.AMOUNT := v_rage * :NEW.HOURS;
+        END;
+    ELSE
+        -- 출근 또는 퇴근 시간이 없거나 퇴근 시간이 출근 시간보다 같거나 작을 경우 0으로 설정
+        :NEW.HOURS := 0;
+        :NEW.AMOUNT := 0;
     END IF;
 END;
 /
+
+
+COMMIT;
+
+SELECT TRIGGER_NAME, STATUS 
+FROM USER_TRIGGERS
+WHERE TRIGGER_NAME = 'WORKHOUR_TRIGGER';
+
+INSERT INTO WORKHOUR (WHID, WH_EMPID, CHECKIN, CHECKOUT)
+VALUES (WORKHOUR_SEQ.NEXTVAL, 7, TO_DATE('2024-11-27 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-11-27 16:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+SELECT * FROM WORKHOUR WHERE WH_EMPID = 7;
+
+
+
+commit;
+
+drop procedure proc_workhour;
+CREATE OR REPLACE PROCEDURE PROC_WORKHOUR(
+    p_checkin IN TIMESTAMP,
+    p_checkout IN TIMESTAMP,
+    p_wh_empid IN NUMBER,
+    p_hours OUT NUMBER,
+    p_amount OUT NUMBER
+) AS
+    v_rage NUMBER; -- 시급 변수
+BEGIN
+    -- 출근 시간과 퇴근 시간이 모두 존재하는 경우
+    IF p_checkin IS NOT NULL AND p_checkout IS NOT NULL THEN
+        -- 일한 시간(HOURS) 계산
+        p_hours := ROUND((CAST(p_checkout AS DATE) - CAST(p_checkin AS DATE)) * 24, 1);
+
+        -- 직원의 시급(RAGE) 조회
+        SELECT RAGE
+        INTO v_rage
+        FROM EMPLOYEE
+        WHERE EMPID = p_wh_empid;
+
+        -- 임금(AMOUNT) 계산
+        p_amount := v_rage * p_hours;
+    ELSE
+        -- 출근 또는 퇴근 정보가 없는 경우 0 처리
+        p_hours := 0;
+        p_amount := 0;
+    END IF;
+END;
+/
+commit;
+
+
+CREATE OR REPLACE PROCEDURE CAL_WORKHOUR(
+    p_checkin IN TIMESTAMP,
+    p_checkout IN TIMESTAMP,
+    p_wh_empid IN NUMBER
+) AS
+    v_hours NUMBER;
+    v_amount NUMBER;
+    v_rage NUMBER;
+BEGIN
+    -- 근무 시간 계산
+    v_hours := ROUND((CAST(p_checkout AS DATE) - CAST(p_checkin AS DATE)) * 24, 1);
+
+    -- 시급 가져오기
+    SELECT RAGE
+    INTO v_rage
+    FROM EMPLOYEE
+    WHERE EMPID = p_wh_empid;
+
+    -- 임금 계산
+    v_amount := v_hours * v_rage;
+
+    -- 결과 출력
+    DBMS_OUTPUT.PUT_LINE('HOURS: ' || v_hours || ', AMOUNT: ' || v_amount);
+END;
+/
+commit;
+
+
+
 
 COMMIT;
  
